@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Project</title>
+
+<style>
+        
+*{
+   box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 8px; 
+}
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+fieldset{
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.main_heading{
+    text-align: center;
+    /* border: 2px solid #ccc; */
+    width: 60%;
+}
+
+input[type="submit"] {
+background-color: #4daea1;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+width: 100%;
+}
+
+input[type="submit"]:hover{
+    background-color: red;
+}
+
+.star{
+    color: red;
+}
+    </style>
+    
+</head>
+<body> 
+    <div class="container">
+        <form action="get">
+            <h1 class="main_heading">Payment form</h1>
+            <hr>
+            <h2>Contact Information</h2>
+            <p> First Name:<span class="star">*</span> <input type="text" name="first name" required placeholder="Enter Your first name"></p>
+            <p>Middle Name: <input type="text" name="middle name"></p>
+            <p>Last Name:<span class="star">*</span><input type="text" name="last name" required placeholder="Enter Your last name"></p>
+            <fieldset>
+                <legend>Gender<span class="star">*</span></legend>
+            <p>
+                Male <input type="radio" name="gander">
+                Female <input type="radio" name="gander">
+            </p>
+        </fieldset>
+        <p>Address:<span class="star">*</span> <input type="address" name="address" cols="100" rows="8" placeholder="Enter Add"></p>
+        <p>Email:<span class="star">*</span> <input type="email" name="email" id="" placeholder="Enter Email" required></p>
+        <p>Pincode:<span class="star">*</span> <input type="number" name="pincode" id="pincode" placeholder="Pincode"></p>
+        <p>Moblie Number: <input type="number" name="moblie number" placeholder="Phone Number" required></p>
+        <hr>
+        <h2>Card Information</h2>
+        <p>Card Type:<span class="star">*</span>
+            <select name="card_type" id="card_type">
+                <option value="">--Select a Card Type--</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="master">Master</option>
+            </select>
+        </p>
+        <p>
+            Card Number<span class="star">*</span> <input type="number" name="Card_number" required>
+        </p>
+         <p>
+             Expiration Date:<span class="star">*</span><input type="date" name="Exp_date">
+         </p>
+         <p>CVV<span class="star">*</span><input type="password" name="CVV"></p>
+         <input type="submit" value="Pay Now" >
+        </form>
+        </div>
+</body>
+</html>
